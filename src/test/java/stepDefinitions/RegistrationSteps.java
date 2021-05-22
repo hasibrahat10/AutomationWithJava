@@ -11,9 +11,9 @@ public class RegistrationSteps extends BasePage {
         new RegistrationPage().setSignInLink();
     }
 
-    @Then("I have entered an email address and click on create an account")
-    public void i_have_entered_an_email_address_and_click_on_create_an_account() {
-        new RegistrationPage().setEmailID();
+    @Then("I have entered an email address as {string} and click on create an account")
+    public void iHaveEnteredAnEmailAddressAsAndClickOnCreateAnAccount(String email) {
+        new RegistrationPage().setEmailID(email);
     }
 
     @Then("I have entered the users information and click register")

@@ -101,9 +101,9 @@ public class RegistrationPage extends BasePage {
         signInLink.click();
     }
 
-    public void setEmailID() {
+    public void setEmailID(String email) {
         emailID.clear();
-        emailID.sendKeys("hasib99@yopmail.com");
+        emailID.sendKeys(email);
         submitCreate.click();
     }
 
