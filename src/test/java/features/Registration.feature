@@ -6,9 +6,9 @@ Feature: Register a new User
     And I have entered the users information and click register
     Then I am on the My Account screen "Welcome to your account. Here you can manage all o"
     Examples:
-      | email                 |
-      | demot@yopmail.com     |
-      | hasib99@yopmail.com   |
+      | email               |
+      | demot@yopmail.com   |
+      | hasib99@yopmail.com |
 
 
 

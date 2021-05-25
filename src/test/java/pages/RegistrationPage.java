@@ -89,8 +89,18 @@ public class RegistrationPage extends BasePage {
     @FindBy(xpath = "//p[contains(text(),'Welcome to your account. Here you can manage all o')]")
     WebElement expectedText;
 
+    @FindBy(id = "email")
+    WebElement userEmail;
+
+    @FindBy(id = "passwd")
+    WebElement userPass;
+
+    @FindBy(id = "SubmitLogin")
+    WebElement submitLogin;
+
 
     //=====================  constructor define ===============================
+
     public RegistrationPage() {
         PageFactory.initElements(driver, this);
     }
@@ -99,6 +109,17 @@ public class RegistrationPage extends BasePage {
 
     public void setSignInLink() {
         signInLink.click();
+    }
+
+    public void userLoginInfo(String email, String pass) {
+        userEmail.clear();
+        userEmail.sendKeys(email);
+        userPass.clear();
+        userPass.sendKeys(pass);
+    }
+
+    public void setSubmitLogin() {
+        submitLogin.click();
     }
 
     public void setEmailID(String email) {

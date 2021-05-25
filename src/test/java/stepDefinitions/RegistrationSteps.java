@@ -24,8 +24,8 @@ public class RegistrationSteps extends BasePage {
 
     @Then("I am on the My Account screen {string}")
     public void i_am_on_the_My_Account_screen(String expectedText) {
-       sleepFor(3);
-       Assert.assertEquals(expectedText, new RegistrationPage().checkTextDisplay());
+        sleepFor(3);
+        Assert.assertEquals(expectedText, new RegistrationPage().checkTextDisplay());
     }
 
 
