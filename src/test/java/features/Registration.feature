@@ -7,8 +7,8 @@ Feature: Register a new User
     Then I am on the My Account screen "Welcome to your account. Here you can manage all o"
     Examples:
       | email               |
-      | demot@yopmail.com   |
-      | hasib99@yopmail.com |
+      | demo99@yopmail.com   |
+      | hasib100@yopmail.com |
 
 
 

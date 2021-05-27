@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,8 +11,9 @@ public class AddToCartPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//li[@class='sfHoverForce']/a[contains(text(),'Dresses')]")
+    @FindBy(xpath = "//a[contains(text(),'Dresses') and @class='sf-with-ul'][2]")
     WebElement dresses;
+
 
     @FindBy(xpath = "//a[contains(text(),'Printed Dress')][1]")
     WebElement printedDress;
@@ -19,7 +21,7 @@ public class AddToCartPage extends BasePage {
     @FindBy(xpath = "//span[contains(text(),'Add to cart')]")
     WebElement addToCartBtn;
 
-    @FindBy(id="layer_cart")
+    @FindBy(id = "layer_cart")
     WebElement layerCart;
 
     @FindBy(xpath = "//span[contains(text(), 'Proceed to checkout')]")
@@ -46,17 +48,17 @@ public class AddToCartPage extends BasePage {
     @FindBy(xpath = "//h1[contains(text(),'Order confirmation')]")
     WebElement expectedText;
 
-    public void setDresses(){
+    public void setDresses() {
         dresses.click();
         printedDress.click();
     }
 
-    public void setAddToCartBtn(){
+    public void setAddToCartBtn() {
         addToCartBtn.click();
         sleepFor(5);
     }
 
-    public void setCheckOutProcess(){
+    public void setCheckOutProcess() {
         driver.switchTo().frame(layerCart);
         proceedToCheckoutBtn.click();
         sleepFor(2);
@@ -67,16 +69,15 @@ public class AddToCartPage extends BasePage {
 
     }
 
-    public void setPaymentMethod(){
+    public void setPaymentMethod() {
         paymentMethod.click();
         sleepFor(2);
         confirmOrder.click();
     }
 
-    public String checkExpectedText(String text){
+    public String checkExpectedText() {
         return expectedText.getText();
     }
-
 
 
 }

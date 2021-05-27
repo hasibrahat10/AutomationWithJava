@@ -27,7 +27,7 @@ public class AddToCartSteps extends BasePage {
 
     @When("I navigate to Dresses category and click on Printed Dress Item")
     public void i_navigate_to_Dresses_category_and_click_on_Printed_Dress_Item() {
-new AddToCartPage().setDresses();
+        new AddToCartPage().setDresses();
     }
 
     @Then("I click on add to cart item")
@@ -38,7 +38,7 @@ new AddToCartPage().setDresses();
 
     @Then("I have completed the checkout")
     public void i_have_completed_the_checkout() {
-new AddToCartPage().setCheckOutProcess();
+        new AddToCartPage().setCheckOutProcess();
     }
 
     @Then("select payment method and confirm my order")
@@ -50,7 +50,7 @@ new AddToCartPage().setCheckOutProcess();
 
     @Then("I expect the text {string}")
     public void i_expect_the_text(String expectedText) {
-        Assert.assertEquals(expectedText, new AddToCartPage().checkExpectedText(expectedText));
+        Assert.assertEquals(expectedText, new AddToCartPage().checkExpectedText());
     }
 
 

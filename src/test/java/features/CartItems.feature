@@ -1,6 +1,7 @@
 Feature: I want to cart Item to Checkout Process
+
   Scenario: Add to cart and checkout process
- Then I click on sign in link
+    Then I click on sign in link
     And I have entered the users information username as "hasib99@yopmail.com" and password as "1234567"
     Then I click on login
     When I navigate to Dresses category and click on Printed Dress Item
